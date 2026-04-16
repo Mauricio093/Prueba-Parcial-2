@@ -1,0 +1,20 @@
+Prompt 1:
+"Crea una aplicacion Java Swing para administrar un parqueo publico con capas de entidades, logica, acceso a datos y presentacion."
+Parte generada:
+Base de la arquitectura del proyecto, entidades iniciales, servicio de negocio y persistencia en archivos.
+Modificaciones manuales:
+Ajuste de nombres de clases, formato de archivos `.txt`, mensajes mostrados en la interfaz y enlace entre tablas y acciones de salida.
+
+Prompt 2:
+"Genera una interfaz Swing sin JOptionPane ni consola para registrar ingresos, salidas y mostrar historial en tablas."
+Parte generada:
+Ventana principal con formulario, tablas `JTable`, etiquetas de estado y botones de accion.
+Modificaciones manuales:
+Refuerzo de validaciones, organizacion visual del formulario, carga de datos desde la logica de negocio y configuracion del `main`.
+
+Prompt 3:
+"Documenta el proyecto con README, CHANGELOG y explica las decisiones principales."
+Parte generada:
+Borrador de la documentacion base.
+Modificaciones manuales:
+Adaptacion al formato pedido por la evaluacion, detalle de estructura por carpetas y versionado esperado `v1.0`, `v1.1` y `v1.2`.
