@@ -1,39 +1,61 @@
-# Sistema de Parqueo Publico
+# 🚗 Sistema de Parqueo Público
 
-Aplicacion desarrollada en Java con Swing, usando arquitectura por capas y persistencia en archivos `.txt`.
+Aplicación de escritorio desarrollada en **Java + Swing** para la gestión de un parqueo público.  
+Este proyecto fue construido con **arquitectura por capas** y **persistencia en archivos `.txt`**, cumpliendo con los requisitos de la evaluación práctica de **Programación II**.
 
-## Estructura
+---
 
-- `src/entidades`: clases del dominio.
-- `src/logica`: validaciones, reglas y calculo de cobro.
-- `src/accesodatos`: manejo de archivos de persistencia.
-- `src/presentacion`: interfaz grafica Swing.
-- `datos`: archivos generados automaticamente para registros activos e historial.
+## ✨ Descripción
 
-## Funcionalidades
+El sistema permite:
 
-- Registro de ingreso con placa, tipo y hora automatica.
-- Registro de salida desde la tabla de vehiculos activos.
-- Calculo de cobro con tarifa de `CRC 500` por hora o fraccion.
-- Visualizacion de vehiculos activos e historial completo.
-- Limpieza del historial de registros.
+- Registrar el **ingreso** de vehículos
+- Registrar la **salida** de vehículos
+- Calcular automáticamente el **monto a pagar**
+- Visualizar los vehículos **activos** en el parqueo
+- Consultar el **historial** de registros
+- Mantener la información guardada en archivos `.txt`
 
-## Reglas implementadas
+---
 
-- No se permite ingresar una placa que ya este activa.
-- Se validan campos obligatorios antes de procesar acciones.
-- La capa de presentacion no accede directamente a archivos.
-- La persistencia se realiza en archivos `.txt`.
+## 🧩 Funcionalidades principales
 
-## Ejecucion
+### ✅ Registro de ingreso
+- Ingreso de la **placa**
+- Selección del tipo de vehículo:
+  - 🚘 Carro
+  - 🏍️ Moto
+- Registro automático de la **hora de entrada**
 
-1. Abrir el proyecto en NetBeans.
-2. Ejecutar el proyecto.
-3. La clase principal configurada es `presentacion.Main`.
+### ✅ Registro de salida
+- Selección del vehículo desde la tabla de activos
+- Registro automático de la **hora de salida**
+- Cálculo automático del **monto a pagar**
 
-## Persistencia
+### ✅ Visualización
+- 📋 Tabla con vehículos actualmente en el parqueo
+- 🕘 Tabla con historial de entradas y salidas
 
-Los archivos se crean automaticamente en la carpeta `datos`:
+### ✅ Extras implementados
+- 🧹 Limpieza del historial
+- 💾 Persistencia local en archivos `.txt`
 
-- `registros_activos.txt`
-- `historial_registros.txt`
+---
+
+## 📌 Reglas de negocio
+
+- ❌ No se permite ingresar una placa que ya esté activa en el parqueo.
+- ✅ Todos los campos obligatorios son validados antes de procesar.
+- 💰 El cobro se realiza con una tarifa de **CRC 500 por hora o fracción**.
+- 🧠 Toda la lógica, validaciones y cálculos están en la capa de negocio.
+
+---
+
+## 🏗️ Arquitectura del proyecto
+
+El sistema sigue esta estructura:
+
+`Presentación -> Lógica de Negocio -> Acceso a Datos`
+
+
+
